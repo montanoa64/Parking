@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>296</y>
+      <w>280</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>ParkingTicket
+--
+-car: Parkedcar
+-base: double
+-rate: double
+-fine: double
+-minutes: double
+-aPolice: PoliceOfficer
+-meter: ParkingMeter
+--
++ParkingTicket()
++ParkingTicket(ParkedCar,PoliceOfficer,ParkingMeter)
++ParkingTicket(ParkedCar,ParkingMeter)
++report():void
++setFine():void
++getFine():double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>112</y>
+      <w>264</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>ParkedCar
+--
+-make: String
+-model: String
+-color String
+-licenceNumber: String
+-minutesCarPark: double
+--
++ParkedCar(String, String, String, double)
++ParkedCar(String, String, String, String, double)
++getMake(): String
++getModel(): String
++getColor(): String
++getLicenceNumber(): String
++getMinutesParked(): double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>32</x>
+      <y>544</y>
+      <w>416</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>PoliceOfficer
+--
+-String name
+-int badge
+--
++PoliceOfficer(String,int)
++getName():String
++getBadge():int
++patroll(aCar: ParkedCar, aMeter: ParkingMeter, cop:PoliceOfficer): ParkingTicket
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>392</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>ParkingMeter
+--
+-minutesPurchased: double
+--
++getMiutes(): double
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>160</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>TicketComparator
+--
++compare(object,object): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>192</x>
+      <y>448</y>
+      <w>24</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>568</x>
+      <y>208</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>288</y>
+      <w>24</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>200</y>
+      <w>152</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>480</y>
+      <w>128</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>400</y>
+      <w>184</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;10.0</additional_attributes>
+  </element>
+</diagram>
